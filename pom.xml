@@ -30,7 +30,41 @@
         <!--</dependency>-->
     </dependencies>
 
-    <!--<build>-->
+    <build>
+        <!-- online instrumentation -->
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-maven-plugin.version}</version>
+                <executions>
+                    <!--
+                        Prepares the property pointing to the JaCoCo runtime agent which
+                        is passed as VM argument when Maven the Surefire plugin is executed.
+                    -->
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <!--
+                        Ensures that the code coverage report for unit tests is created after
+                        unit tests have been run.
+                    -->
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+
+        <!--offline instrumentation-->
         <!--<plugins>-->
             <!--<plugin>-->
                 <!--<groupId>org.jacoco</groupId>-->
@@ -69,5 +103,5 @@
                 <!--</configuration>-->
             <!--</plugin>-->
         <!--</plugins>-->
-    <!--</build>-->
+    </build>
 </project>
