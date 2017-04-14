@@ -7,7 +7,6 @@ import org.junit.Test;
 
 public class CoveredClassCalculatorTest {
 
-
     @Test
     public void multiple() throws Exception {
         assertThat(CoveredClassCalculator.multiple(2, 3), is(6));
