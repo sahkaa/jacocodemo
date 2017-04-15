@@ -1,4 +1,5 @@
 devfactory:
   version: 1
-  excludes:
-    - **/*Test.class
+  coverage:
+    excludes:
+      - **/*Test.class
