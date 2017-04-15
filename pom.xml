@@ -98,9 +98,13 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <configuration>
-                    <excludes>
-                        <exclude>**/*Test.class</exclude>
-                    </excludes>
+
+                    <includes>
+                        <includeTests>true</includeTests>
+                        <include>**/*</include>
+                        <include>*</include>
+                        <include>*Test.class</include>
+                    </includes>
                 </configuration>
                 <executions>
                     <execution>
