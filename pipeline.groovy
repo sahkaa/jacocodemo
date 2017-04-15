@@ -10,8 +10,8 @@ node('java-agent') {
                     types: 'Java',
                     jacocoFile: "target/jacoco.exec") {
                 sh "mvn clean install"
-                step([$class: 'JacocoPublisher'
-
+                step([$class: 'JacocoPublisher',
+                      classPattern: "**/generated-classes/**/*"
                 ])
             }
         }
