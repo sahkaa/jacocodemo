@@ -2,4 +2,4 @@ devfactory:
   version: 1
   coverage:
     excludes:
-      - io/**/*Test.class
+      - io/sahka/*Test.class
