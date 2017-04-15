@@ -4,9 +4,15 @@ node('java-agent') {
             git branch: 'master', url: 'https://github.com/sahkaa/jacocodemo.git'
         }
         stage('Compile and Test') {
-            devfactory(env: 'dev', key: '126SABPM7GXEQDWRQUBA', secret: '8DNT9PTRVBM1I7DRKOOPZ9I4VHRFR9D54A5HT4L8', languages: 'Java', types: 'Java') {
+            devfactory(env: 'dev', key: '126SABPM7GXEQDWRQUBA',
+                    secret: '8DNT9PTRVBM1I7DRKOOPZ9I4VHRFR9D54A5HT4L8',
+                    languages: 'Java',
+                    types: 'Java',
+                    jacocoFile: "target/jacoco.exec") {
                 sh "mvn clean install"
-                step( [ $class: 'JacocoPublisher' ] )
+                step([$class: 'JacocoPublisher'
+
+                ])
             }
         }
     }
