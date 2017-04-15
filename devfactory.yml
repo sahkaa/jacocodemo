@@ -1,0 +1,4 @@
+devfactory:
+  version: 1
+  excludes:
+    - **/*Test.class
