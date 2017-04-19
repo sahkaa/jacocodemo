@@ -3,3 +3,4 @@ devfactory:
   coverage:
     excludes:
       - io/sahka/*Test.class
+      - **/*.class
