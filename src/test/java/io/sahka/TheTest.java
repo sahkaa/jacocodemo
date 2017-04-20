@@ -34,13 +34,6 @@ public class TheTest {
     }
 
     @Test
-    public void testThenFail() {
-        MockedClass mocked = mock(MockedClass.class);
-        mocked.dummyMethod();
-        then(mocked).should(times(10)).dummyMethod();
-    }
-
-    @Test
     public void testVerifyNoMoreInteractions() {
         MockedClass mocked = mock(MockedClass.class);
         verifyNoMoreInteractions(mocked);
