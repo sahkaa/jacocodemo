@@ -20,6 +20,7 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.reflect.Whitebox;
 import java.util.ArrayList;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Configuration.class, Lamda.class})
@@ -40,6 +41,9 @@ public class SomeClassTest {
         doReturn(properties).when(Configuration.class, "readProperties");
         doCallRealMethod().when(Configuration.class, "isEnabled");
         doCallRealMethod().when(Configuration.class, "loadFromProperties");
+
+//        FIRE-11807
+        Thread.sleep(TimeUnit.MINUTES.toMillis(3));
 
         assertThat(new SomeClass().add(1, 5)).isEqualTo(6);
     }
