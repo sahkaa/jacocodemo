@@ -43,7 +43,7 @@ public class SomeClassTest {
         doCallRealMethod().when(Configuration.class, "loadFromProperties");
 
 //        FIRE-11807
-        Thread.sleep(TimeUnit.MINUTES.toMillis(3));
+        Thread.sleep(TimeUnit.MINUTES.toMillis(10));
 
         assertThat(new SomeClass().add(1, 5)).isEqualTo(6);
     }
