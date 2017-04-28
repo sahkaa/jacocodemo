@@ -18,7 +18,7 @@ public class Configuration {
         }
         return enabled;
     }
-REMOVEME
+
     private static void loadFromProperties() {
         Properties properties = readProperties();
         enabled = "true".equals(properties.getProperty("enabled"));
