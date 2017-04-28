@@ -43,6 +43,7 @@ public class SomeClassTest {
         doCallRealMethod().when(Configuration.class, "loadFromProperties");
 
 //        FIRE-11807
+        System.out.println("Start sleeping!!!");
         Thread.sleep(TimeUnit.MINUTES.toMillis(2));
         if (true) {
             throw new RuntimeException();
