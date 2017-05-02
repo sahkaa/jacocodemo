@@ -15,6 +15,7 @@ public class Lamda {
         for (String s : a) {
             result += s.substring(0, 1).toUpperCase() + s.substring(1, s.length());
         }
+        asdfasdf
         return result;
     }
 
