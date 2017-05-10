@@ -11,6 +11,8 @@ import static org.powermock.api.mockito.PowerMockito.doReturn;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.when;
 
+import java.util.ArrayList;
+import java.util.Properties;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,9 +20,6 @@ import org.mockito.Mockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.reflect.Whitebox;
-import java.util.ArrayList;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Configuration.class, Lamda.class})
@@ -41,13 +40,6 @@ public class SomeClassTest {
         doReturn(properties).when(Configuration.class, "readProperties");
         doCallRealMethod().when(Configuration.class, "isEnabled");
         doCallRealMethod().when(Configuration.class, "loadFromProperties");
-
-//        FIRE-11807
-        System.out.println("Start sleeping!!!");
-        Thread.sleep(TimeUnit.MINUTES.toMillis(2));
-        if (true) {
-            throw new RuntimeException();
-        }
 
         assertThat(new SomeClass().add(1, 5)).isEqualTo(6);
     }
