@@ -11,4 +11,11 @@ public class SomeClass {
         }
         return 0;
     }
+
+    public int add2(int x, int y) {
+        if (Configuration.isEnabled()) {
+            return x + y;
+        }
+        return 0;
+    }
 }
