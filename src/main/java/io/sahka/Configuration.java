@@ -33,4 +33,15 @@ public class Configuration {
         }
         return properties;
     }
+
+    public static void testCOverageUniquePerCommit(int b) {
+
+        int a= 1;
+        System.out.println("Hi there");
+
+        if (b==2) {
+            a++;
+        }
+        a = a + b;
+    }
 }
