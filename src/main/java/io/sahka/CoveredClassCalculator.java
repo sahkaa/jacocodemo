@@ -9,20 +9,4 @@ public class CoveredClassCalculator {
     public static int divide(int a, int b) {
         return a / b;
     }
-
-    public static int multipleNotCovered(int a, int b) {
-        return a * b;
-    }
-
-    public static int divideNotCovered(int a, int b) {
-        return a / b;
-    }
-
-    public static int multipleNotCovered3(int a, int b) {
-        return a * b;
-    }
-
-    public static int divideNotCovered3(int a, int b) {
-        return a / b;
-    }
 }
