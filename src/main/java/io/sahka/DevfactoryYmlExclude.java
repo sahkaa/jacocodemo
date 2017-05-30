@@ -10,4 +10,12 @@ public class DevfactoryYmlExclude {
         return a / b;
     }
 
+    public static int multipleTwo(int a, int b) {
+        return a * b;
+    }
+
+    public static int divideTwo(int a, int b) {
+        return a / b;
+    }
+
 }
