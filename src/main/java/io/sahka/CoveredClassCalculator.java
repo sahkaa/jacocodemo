@@ -10,13 +10,4 @@ public class CoveredClassCalculator {
         return a / b;
     }
 
-
-    public static int multipleOne(int a, int b) {
-        return a * b;
-    }
-
-    public static int divideOne(int a, int b) {
-        return a / b;
-    }
-
 }
