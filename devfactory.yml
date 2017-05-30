@@ -1,0 +1,5 @@
+devfactory:
+  version: 1
+  coverage:
+    excludes:
+      - '**/*DevfactoryYmlExclude*'
