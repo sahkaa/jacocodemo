@@ -2,4 +2,4 @@ devfactory:
   version: 1
   coverage:
     excludes:
-      - '**/DevfactoryYmlTest.java'
+      - '**/DevfactoryYm2222lTest.java'
