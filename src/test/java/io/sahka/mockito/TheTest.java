@@ -37,7 +37,7 @@ public class TheTest {
     public void testThenFail() {
         MockedClass mocked = mock(MockedClass.class);
         mocked.dummyMethod();
-        then(mocked).should(times(10)).dummyMethod();
+        then(mocked).should(times(1)).dummyMethod();
     }
 
     @Test

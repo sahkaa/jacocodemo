@@ -18,15 +18,15 @@ public class TheTest {
 
     @Test
     public void testAssertwionFailure() {
-        assertEquals(1, 2);
+        assertEquals(2, 2);
     }
 
-    @Test
+    @Test(expected = AssertionError.class)
     public void testFail() {
         fail("Hi there");
     }
 
-    @Test
+    @Test(expected = IllegalStateException.class)
     public void testUnexpectedException() {
         throw new IllegalStateException("An exception");
     }
