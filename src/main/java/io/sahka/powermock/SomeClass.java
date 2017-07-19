@@ -1,18 +1,12 @@
-package io.sahka;
+package io.sahka.powermock;
 
 /**
  * @author Alexander Yushchenko
  * @since 2017.04.15
  */
 public class SomeClass {
-    public int add(int x, int y) {
-        if (Configuration.isEnabled()) {
-            return x + y;
-        }
-        return 0;
-    }
 
-    public int add2(int x, int y) {
+    public int add(int x, int y) {
         if (Configuration.isEnabled()) {
             return x + y;
         }

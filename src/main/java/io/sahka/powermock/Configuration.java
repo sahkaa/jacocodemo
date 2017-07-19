@@ -1,4 +1,4 @@
-package io.sahka;
+package io.sahka.powermock;
 
 import java.io.FileInputStream;
 import java.io.IOException;

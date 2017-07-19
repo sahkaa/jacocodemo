@@ -16,5 +16,4 @@ public class DevfactoryYmlTest {
     public void divide() throws Exception {
         assertThat(DevfactoryYmlExclude.divide(6, 3), is(2));
     }
-
 }

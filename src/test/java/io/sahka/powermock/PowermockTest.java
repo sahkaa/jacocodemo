@@ -11,9 +11,7 @@ import static org.powermock.api.mockito.PowerMockito.doReturn;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.when;
 
-import io.sahka.Configuration;
 import io.sahka.Lamda;
-import io.sahka.SomeClass;
 import java.util.ArrayList;
 import java.util.Properties;
 import org.assertj.core.api.Assertions;
