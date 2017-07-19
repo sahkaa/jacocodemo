@@ -1,4 +1,4 @@
-package io.sahka;
+package io.sahka.powermock;
 
 /**
  * @author Alexander Yushchenko
@@ -11,8 +11,12 @@ import static org.powermock.api.mockito.PowerMockito.doReturn;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.when;
 
+import io.sahka.Configuration;
+import io.sahka.Lamda;
+import io.sahka.SomeClass;
 import java.util.ArrayList;
 import java.util.Properties;
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +27,7 @@ import org.powermock.reflect.Whitebox;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Configuration.class, Lamda.class})
-public class SomeClassTest {
+public class PowermockTest {
 
     @Before
     public void setUp() throws Exception {
@@ -41,7 +45,7 @@ public class SomeClassTest {
         doCallRealMethod().when(Configuration.class, "isEnabled");
         doCallRealMethod().when(Configuration.class, "loadFromProperties");
 
-        assertThat(new SomeClass().add(1, 5)).isEqualTo(6);
+        Assertions.assertThat(new SomeClass().add(1, 5)).isEqualTo(6);
     }
 
     @Test
