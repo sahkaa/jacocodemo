@@ -34,6 +34,7 @@ public class PowermockTest {
 
     @Test
     public void shouldReturnSumIfEnabled() throws Exception {
+
         mockStatic(Configuration.class);
 
         Properties properties = new Properties();
