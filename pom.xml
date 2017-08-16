@@ -95,7 +95,6 @@
                     <!--is passed as VM argument when Maven the Surefire plugin is executed.-->
                     <!--&ndash;&gt;-->
                     <!--<execution>-->
-                        <!--<id>jacoco-initialize</id>-->
                         <!--<goals>-->
                             <!--<goal>prepare-agent</goal>-->
                         <!--</goals>-->
