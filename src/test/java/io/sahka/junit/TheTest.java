@@ -1,6 +1,7 @@
 package io.sahka.junit;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -9,6 +10,11 @@ public class TheTest {
 
     @Test
     public void testNoAssert() {
+    }
+
+    @Test
+    public void testNoAssert2() {
+        assertTrue("Have to fail test", false);
     }
 
     @Test
