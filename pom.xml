@@ -84,36 +84,36 @@
 
     <build>
         <!--online instrumentation-->
-        <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco-maven-plugin.version}</version>
-                <executions>
-                    <!--
-                    Prepares the property pointing to the JaCoCo runtime agent which
-                    is passed as VM argument when Maven the Surefire plugin is executed.
-                    -->
-                    <execution>
-                        <id>jacoco-initialize</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <!--
-                    Ensures that the code coverage report for unit tests is created after
-                    unit tests have been run.
-                    -->
-                    <execution>
-                        <id>jacoco-site</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.jacoco</groupId>-->
+                <!--<artifactId>jacoco-maven-plugin</artifactId>-->
+                <!--<version>${jacoco-maven-plugin.version}</version>-->
+                <!--<executions>-->
+                    <!--&lt;!&ndash;-->
+                    <!--Prepares the property pointing to the JaCoCo runtime agent which-->
+                    <!--is passed as VM argument when Maven the Surefire plugin is executed.-->
+                    <!--&ndash;&gt;-->
+                    <!--<execution>-->
+                        <!--<id>jacoco-initialize</id>-->
+                        <!--<goals>-->
+                            <!--<goal>prepare-agent</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                    <!--&lt;!&ndash;-->
+                    <!--Ensures that the code coverage report for unit tests is created after-->
+                    <!--unit tests have been run.-->
+                    <!--&ndash;&gt;-->
+                    <!--<execution>-->
+                        <!--<id>jacoco-site</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>report</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
 
 
         <!--offline instrumentation-->
