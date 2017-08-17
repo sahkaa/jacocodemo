@@ -6,7 +6,7 @@ public class DevfactoryYmlExclude {
         return a * b;
     }
 
-    public static int divide(int a, int b) {
+    public static intasdfasdf divide(int a, int b) {
         return a / b;
     }
 
@@ -18,4 +18,4 @@ public class DevfactoryYmlExclude {
         return a / b;
     }
 
-}
+}asdfasdfads
