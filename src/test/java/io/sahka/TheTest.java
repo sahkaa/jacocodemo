@@ -1,47 +1,25 @@
 package io.sahka;
 
-import static org.mockito.BDDMockito.then;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.mockito.Mockito.verifyZeroInteractions;
+import junit.framework.TestCase;
 
-import org.junit.Test;
+public class TheTest extends TestCase {
 
-public class TheTest {
-
-    @Test
-    public void testVerify() {
-        MockedClass mocked = mock(MockedClass.class);
-        mocked.dummyMethod();
-        verify(mocked).dummyMethod();
+    public void testNoAssert() {
     }
 
-    @Test
-    public void testThen() {
-        MockedClass mocked = mock(MockedClass.class);
-        mocked.dummyMethod();
-        then(mocked).should(times(1)).dummyMethod();
+    public void testOneAssert() {
+        assertEquals(2, 2);
     }
 
-    @Test
-    public void testThenAndVerify() {
-        MockedClass mocked = mock(MockedClass.class);
-        mocked.dummyMethod();
-        then(mocked).should(times(1)).dummyMethod();
-        verify(mocked).dummyMethod();
+    public void testAssertionFailure() {
+        assertEquals(1,2);
     }
 
-    @Test
-    public void testVerifyNoMoreInteractions() {
-        MockedClass mocked = mock(MockedClass.class);
-        verifyNoMoreInteractions(mocked);
+    public void testTrue() {
+        assertTrue(true);
     }
 
-    @Test
-    public void testVerifyZeroInteractions() {
-        MockedClass mocked = mock(MockedClass.class);
-        verifyZeroInteractions(mocked);
+    public void testUnexpectedException() {
+        throw new IllegalStateException("An exception");
     }
 }
