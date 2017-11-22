@@ -1,9 +1,9 @@
 package io.sahka;
 
+import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-
-import org.junit.Test;
 
 public class CoveredClassCalculatorTest {
 
@@ -16,5 +16,4 @@ public class CoveredClassCalculatorTest {
     public void divide() throws Exception {
         assertThat(CoveredClassCalculator.divide(6, 3), is(2));
     }
-
 }

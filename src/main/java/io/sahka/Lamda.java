@@ -3,10 +3,6 @@ package io.sahka;
 import java.util.List;
 import java.util.function.Consumer;
 
-/**
- * @author Alexander Yushchenko
- * @since 2017.04.15
- */
 public class Lamda {
 
     public static String capitalize(String in) {
