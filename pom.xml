@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
+        <!--<maven.compiler.source>1.6</maven.compiler.source>-->
+        <!--<maven.compiler.target>1.6</maven.compiler.target>-->
         <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
         <powermock.version>1.6.6</powermock.version>
         <assertj-core.version>3.6.2</assertj-core.version>
@@ -159,6 +159,15 @@
         <!--</systemPropertyVariables>-->
         <!--</configuration>-->
         <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<source>1.6</source>-->
+                    <!--<target>1.6</target>-->
+                    <!--<compilerVersion>1.6</compilerVersion>-->
+                    <!--<executable>/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/javac</executable>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 </project>
