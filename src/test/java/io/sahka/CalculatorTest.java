@@ -1,9 +1,13 @@
 package io.sahka;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 
 public class CalculatorTest {
@@ -16,11 +20,8 @@ public class CalculatorTest {
 
     @Test
     void testAssertThrows() {
-        assertThrows(RuntimeException.class, new Executable() {
-            @Override
-            public void execute() throws Throwable {
-                throw new RuntimeException();
-            }
+        assertThrows(RuntimeException.class, () -> {
+            throw new RuntimeException();
         });
     }
 
@@ -42,5 +43,9 @@ public class CalculatorTest {
     @Test
     void testAssertNotNull() {
         assertNotNull("notNull");
+    }
+
+    @Test
+    void exerciseTest() {
     }
 }
